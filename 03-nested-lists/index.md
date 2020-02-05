@@ -1,6 +1,7 @@
 # HTML exercise 03: Nested lists
 
-In the accompanying file `03-nested-lists.html` you'll find an empty `<body>` element. Let's try make an HTML nested list inside that HTML file. 
+In the accompanying file `03-nested-lists.html` you'll find an empty `<body>` element. Let's t
+ry make an HTML nested list inside that HTML file. 
 
 Make it look like the following:
 
