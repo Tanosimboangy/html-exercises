@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>List</title>
+        <style>
+            section {
+                border:1px solid  #ccc:yellow
+                padding: 1rem
+            }
+
+            section:target {
+                background-color:rgb(255, 169, 71)
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>List</h1>
+        
+        </header>
+        <nav>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#section_ordered">Ordered list</a>
+                </li>
+                <li>
+                    <a href="#section_unordered">Unordered list</a>
+                </li>
+                <li>
+                    <a href="#section_nav">Unordered list with a nav</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="section_ordered">
+            </section>
+                <header>
+                <h2>orderd list</h2>
+                </header>
+            <ol>
+                <li>
+                    item
+                </li>
+                <li>
+                    item
+                </li>
+            </ol>
+
+            <section id="section_unordered">
+            </section>
+                <header>
+                <h2>unordered list</h2>
+            </header>
+        <ul>
+            <li>
+                item
+            </li>
+            <li>
+                item
+            </li>
+        </ul>
+            <section id="section_nav">
+            </section>
+                <header>
+                    <h2>Unorderedlist inside a <code>nav</code></h2>
+                </header>
+        <ul>
+            <li>
+                <a href="">Nav item
+            </li>
+            <li>
+                <a href="">Nav item
+            </li>
+        </ul>
+        </main>
+    </body>
+</html>
