@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -7,6 +8,7 @@
       08: A log in form
     </title>
   </head>
+
   <body>
     <header>
       <h1>
@@ -14,13 +16,31 @@
       </h1>
     </header>
     <main>
-      <header>
-        <h2>Log in</h2>
-        <p>Please log in before accessing our website</p>
-      </header>
+      <h2>
+        Log in
+      </h2>
+      <p>
+        Please log in before accessing our website
+      </p>
 
-      <!-- Add your log in form here -->
-
+      <form action="/log-in" method="POST">
+        <p>
+          <label>
+            Username <br>
+            <input type="text" id="username" name="username" required>
+          </label>
+        </p>
+        <p>
+          <label for="password">
+            Password <br>
+            <input type="password" id="password" name="password" required>
+          </label>
+        </p>
+        <p>
+          <input type="submit" value="log-in">
+        </p>
+      </form>
     </main>
   </body>
+
 </html>
