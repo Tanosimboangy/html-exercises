@@ -31,26 +31,37 @@
         </header>
         <fieldset>
           <legend>Simple text: Nickname</legend>
+          <input type="text" id="Nickname" name="Nickname" required>
           <!-- The server is expecting plain text here with the `name` of `nickname`. Linebreaks aren't allowed. -->
         </fieldset>
         <fieldset>
           <legend>Multi-line Text: Biography</legend>
+          <label for="story">Tell us your story:</label>
+          <textarea id="story" name="story"
+                    rows="5" cols="33">
+          </textarea>
           <!-- The server is expecting paragraphs of text here to act as the `biography` field. Linebreaks need to be saved. -->
         </fieldset>
         <fieldset>
           <legend>Mobile phone number</legend>
+          <input type="number" id="Mobil phone" name="Mobil phone" required>
           <!-- The server is expecting the user's `mobile_phone` here. -->
         </fieldset>
         <fieldset>
           <legend>Website</legend>
+          <input type="url" name="url" id="url"
+           pattern="https://.*" size="30"
+           required>
           <!-- The server is expecting the user's `website` address here. -->
         </fieldset>
         <fieldset>
           <legend>Date of birth</legend>
+          <input type="date" id="date_of_birth" name="date_of_birth" required>
           <!-- The server is expecting the user's `date_of_birth` here. -->
         </fieldset>
         <fieldset>
           <legend>Age</legend>
+          <input type="number" id="Age" name="Age" required>
           <!-- The server is expecting the user's `age` in years here. -->
         </fieldset>
         <div>
@@ -64,6 +75,14 @@
         </header>
         <fieldset>
           <legend>True / False, with a default choice</legend>
+          <input type="radio" name="choice" value="true" checked required>
+            <label for="true">
+              True
+            </label><br>
+          <input type="radio" name="choice" value="false"checked required>
+            <label for="false">
+              False
+            </label><br>
           <!-- The server is expecting a choice between `true` and `false` only. Set it to `true` by default. -->
         </fieldset>
         <fieldset>
@@ -73,6 +92,11 @@
         </fieldset>
         <fieldset>
           <legend>Yes or No</legend>
+          <input type="radio" name="agree" value="yes" checked required><label for="yes">Yes</label><br>
+          <input type="radio" name="agree" value="no" checked required>
+          <label for="no">
+            No
+          </label><br>
           <!-- The server is expecting a value of `yes`, or `no` for the `agree` field. -->
         </fieldset>
         <div>
@@ -86,6 +110,12 @@
         </header>
         <fieldset>
           <legend>Small list of values</legend>
+            <ul>
+              <li><input type="radio" name="option" value="apples" checked required><label for="apples">Apples</label></li>
+              <li><input type="radio" name="option" value="bananas" checked required><label for="bananas">Bananas</label></li>
+              <li><input type="radio" name="option" value="grapes" checked required><label for="grapes">Grapes</label></li>
+              <li><input type="radio" name="option" value="plums" checked required><label for="plums">Plums</label></li>
+            </ul>
           <!--
             The server is expecting one of the following values for `fruit`:
 
@@ -97,6 +127,16 @@
         </fieldset>
         <fieldset>
           <legend>Large list of values</legend>
+          <select name="birds">
+            <option value="ducks">Ducks</option>
+            <option value="eagles">Eagles</option>
+            <option value="herons">Herons</option>
+            <option value="gulls">Gulls</option>
+            <option value="pigeons">Pigeons</option>
+            <option value="ravens">Ravens</option>
+            <option value="robins">Robins</option>
+            <option value="swallows">Swallows</option>
+          </select>
           <!--
             The server is expecting one of the following values for `birds`:
 
@@ -121,6 +161,12 @@
         </header>
         <fieldset>
           <legend>Small list of values</legend>
+            <ul>
+              <li><input type="checkbox" name="apples" value="apples"/>Apples</li>
+              <li><input type="checkbox" name="bananas" value="bananas"/>Bananas</li>
+              <li><input type="checkbox" name="grapes" value="grapes"/>Grapes</li>
+              <li><input type="checkbox" name="plums" value="plums"/>Plums</li>
+          </select>
           <!--
             The server is expecting one or more of the following values for `fruit`:
 
@@ -132,6 +178,17 @@
         </fieldset>
         <fieldset>
           <legend>Large list of values</legend>
+            <ul>
+              <li><input type="checkbox" name="ducks" value="Ducks"/>Ducks</li>
+              <li><input type="checkbox" name="eagles" value="Eagles"/>Eagles</li>
+              <li><input type="checkbox" name="herons" value="Herons"/>Herons</li>
+              <li><input type="checkbox" name="gulls" value="Gulls"/>Gulls</li>
+              <li><input type="checkbox" name="pigeons" value="Pigeons"/>Pigeons</li>
+              <li><input type="checkbox" name="ravens" value="Ravens"/>Ravens</li>
+              <li><input type="checkbox" name="robins" value="Robins"/>Robins</li>
+              <li><input type="checkbox" name="swallows" value="Swallows"/>Swallows</li>
+            </ul>
+          </select>
           <!--
             The server is expecting one or more of the following values for `birds`:
 
@@ -156,6 +213,7 @@
         </header>
         <fieldset>
           <legend>Hidden</legend>
+          <imput type="hidden" value="signed=true">
           <!--
             The server is expecting a hidden `signed=true` pair here.
           -->
@@ -185,3 +243,8 @@
     </main>
   </body>
 </html>
+  <input type="checkbox" name="favorite1" value="chocolate" /> Chocolate
+  <input type="checkbox" name="favorite2" value="vanilla" /> Vanilla
+  <input type="checkbox" name="favorite3" value="mint" /> Mint
+  <input type="checkbox" name="tip1" value="1" checked /> Default Option
+  <input type="checkbox" name="tip2" value="2" /> Other Option
