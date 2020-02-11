@@ -44,7 +44,7 @@
         </fieldset>
         <fieldset>
           <legend>Mobile phone number</legend>
-          <input type="number" id="Mobil phone" name="Mobil phone" required>
+          <input type="number" name="Mobil phone" required>
           <!-- The server is expecting the user's `mobile_phone` here. -->
         </fieldset>
         <fieldset>
@@ -56,7 +56,7 @@
         </fieldset>
         <fieldset>
           <legend>Date of birth</legend>
-          <input type="date" id="date_of_birth" name="date_of_birth" required>
+          <input type="date" name="date_of_birth" required>
           <!-- The server is expecting the user's `date_of_birth` here. -->
         </fieldset>
         <fieldset>
@@ -76,11 +76,11 @@
         <fieldset>
           <legend>True / False, with a default choice</legend>
           <input type="radio" name="choice" value="true" checked required>
-            <label for="true">
+            <label>
               True
             </label><br>
-          <input type="radio" name="choice" value="false"checked required>
-            <label for="false">
+          <input type="radio" name="choice" value="false" checked required>
+            <label>
               False
             </label><br>
           <!-- The server is expecting a choice between `true` and `false` only. Set it to `true` by default. -->
@@ -92,11 +92,8 @@
         </fieldset>
         <fieldset>
           <legend>Yes or No</legend>
-          <input type="radio" name="agree" value="yes" checked required><label for="yes">Yes</label><br>
-          <input type="radio" name="agree" value="no" checked required>
-          <label for="no">
-            No
-          </label><br>
+          <input type="radio" name="agree" value="yes" checked required><label>Yes</label><br>
+          <input type="radio" name="agree" value="no" checked required><label>No</label><br>
           <!-- The server is expecting a value of `yes`, or `no` for the `agree` field. -->
         </fieldset>
         <div>
@@ -111,18 +108,13 @@
         <fieldset>
           <legend>Small list of values</legend>
             <ul>
-              <li><input type="radio" name="option" value="apples" checked required><label for="apples">Apples</label></li>
-              <li><input type="radio" name="option" value="bananas" checked required><label for="bananas">Bananas</label></li>
-              <li><input type="radio" name="option" value="grapes" checked required><label for="grapes">Grapes</label></li>
-              <li><input type="radio" name="option" value="plums" checked required><label for="plums">Plums</label></li>
+              <li><input type="radio" name="option" value="apples" checked required><label>Apples</label></li>
+              <li><input type="radio" name="option" value="bananas" checked required><label>Bananas</label></li>
+              <li><input type="radio" name="option" value="grapes" checked required><label>Grapes</label></li>
+              <li><input type="radio" name="option" value="plums" checked required><label>Plums</label></li>
             </ul>
           <!--
             The server is expecting one of the following values for `fruit`:
-
-              - `apples`: Apples
-              - `bananas`: Bananas
-              - `grapes`: Grapes
-              - `plums`: Plums
           -->
         </fieldset>
         <fieldset>
@@ -139,15 +131,6 @@
           </select>
           <!--
             The server is expecting one of the following values for `birds`:
-
-              - `duck`: Ducks
-              - `eagle`: Eagles
-              - `heron`: Herons
-              - `gull`: Gulls
-              - `pigeon`: Pigeons
-              - `raven`: Ravens
-              - `robin`: Robins
-              - `swallow`: Swallows
           -->
         </fieldset>
         <div>
@@ -166,14 +149,9 @@
               <li><input type="checkbox" name="bananas" value="bananas"/>Bananas</li>
               <li><input type="checkbox" name="grapes" value="grapes"/>Grapes</li>
               <li><input type="checkbox" name="plums" value="plums"/>Plums</li>
-          </select>
+            </ul>
           <!--
             The server is expecting one or more of the following values for `fruit`:
-
-              - `apples`: Apples
-              - `bananas`: Bananas
-              - `grapes`: Grapes
-              - `plums`: Plums
           -->
         </fieldset>
         <fieldset>
@@ -188,18 +166,8 @@
               <li><input type="checkbox" name="robins" value="Robins"/>Robins</li>
               <li><input type="checkbox" name="swallows" value="Swallows"/>Swallows</li>
             </ul>
-          </select>
           <!--
             The server is expecting one or more of the following values for `birds`:
-
-              - `duck`: Ducks
-              - `eagle`: Eagles
-              - `heron`: Herons
-              - `gull`: Gulls
-              - `pigeon`: Pigeons
-              - `raven`: Ravens
-              - `robin`: Robins
-              - `swallow`: Swallows
           -->
         </fieldset>
         <div>
@@ -213,7 +181,7 @@
         </header>
         <fieldset>
           <legend>Hidden</legend>
-          <imput type="hidden" value="signed=true">
+          <input type="hidden" name="signed" value="true">
           <!--
             The server is expecting a hidden `signed=true` pair here.
           -->
@@ -223,15 +191,20 @@
           <!--
             The server is expecting at least one file here, with the name of `photos`.
           -->
+          <input type="file" name="photos">
         </fieldset>
         <fieldset>
           <legend>Range</legend>
           <!--
             The server is expecting at a numerical value for `bearing` between 0 and 359
           -->
+          <input type="range" name="bearing" min=0 max="359">
         </fieldset>
         <fieldset>
           <legend>Colour</legend>
+          <label>
+            <input type="color" name="background_color">
+          </label>
           <!--
             The server is expecting at a colour value for `background_colour`
           -->
@@ -243,8 +216,3 @@
     </main>
   </body>
 </html>
-  <input type="checkbox" name="favorite1" value="chocolate" /> Chocolate
-  <input type="checkbox" name="favorite2" value="vanilla" /> Vanilla
-  <input type="checkbox" name="favorite3" value="mint" /> Mint
-  <input type="checkbox" name="tip1" value="1" checked /> Default Option
-  <input type="checkbox" name="tip2" value="2" /> Other Option
