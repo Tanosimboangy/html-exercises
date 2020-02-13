@@ -31,26 +31,27 @@
         </header>
         <fieldset>
           <legend>Simple text: Nickname</legend>
-          <input type="text" id="Nickname" name="Nickname" required>
+          <input type="hidden" id="Nickname" name="Nickname" required>
           <!-- The server is expecting plain text here with the `name` of `nickname`. Linebreaks aren't allowed. -->
         </fieldset>
         <fieldset>
           <legend>Multi-line Text: Biography</legend>
-          <label for="story">Tell us your story:</label>
-          <textarea id="story" name="story"
+          <label>
+            Tell us your biography:
+          </label>
+          <textarea name="biography"
                     rows="5" cols="33">
           </textarea>
           <!-- The server is expecting paragraphs of text here to act as the `biography` field. Linebreaks need to be saved. -->
         </fieldset>
         <fieldset>
           <legend>Mobile phone number</legend>
-          <input type="number" name="Mobil phone" required>
+          <input type="tel" name="mobil_phone" required>
           <!-- The server is expecting the user's `mobile_phone` here. -->
         </fieldset>
         <fieldset>
           <legend>Website</legend>
-          <input type="url" name="url" pattern="https://.*" size="30"
-           required>
+          <input type="url" name="website"required>
           <!-- The server is expecting the user's `website` address here. -->
         </fieldset>
         <fieldset>
@@ -60,7 +61,7 @@
         </fieldset>
         <fieldset>
           <legend>Age</legend>
-          <input type="number" id="Age" name="Age" required>
+          <input type="number" name="age" required>
           <!-- The server is expecting the user's `age` in years here. -->
         </fieldset>
         <div>
@@ -73,15 +74,14 @@
           <h2>Boolean / Binary choices</h2>
         </header>
         <fieldset>
-          <legend>True / False, with a default choice</legend>
-          <input type="radio" name="choice" value="true" checked required>
-            <label>
-              True
-            </label><br>
-          <input type="radio" name="choice" value="false" checked required>
-            <label>
-              False
-            </label><br>
+          <label>
+            <input type="radio" name="choice" value="true" checked required>
+            True
+          </label>
+          <label>
+            <input type="radio" name="choice" value="false" required>
+            False
+          </label>
           <!-- The server is expecting a choice between `true` and `false` only. Set it to `true` by default. -->
         </fieldset>
         <fieldset>
@@ -92,7 +92,7 @@
         <fieldset>
           <legend>Yes or No</legend>
           <input type="radio" name="agree" value="yes" checked required><label>Yes</label><br>
-          <input type="radio" name="agree" value="no" checked required><label>No</label><br>
+          <input type="radio" name="agree" value="no" required><label>No</label><br>
           <!-- The server is expecting a value of `yes`, or `no` for the `agree` field. -->
         </fieldset>
         <div>
@@ -107,26 +107,26 @@
         <fieldset>
           <legend>Small list of values</legend>
             <ul>
-              <li><input type="radio" name="option" value="apples" checked required><label>Apples</label></li>
-              <li><input type="radio" name="option" value="bananas" checked required><label>Bananas</label></li>
-              <li><input type="radio" name="option" value="grapes" checked required><label>Grapes</label></li>
-              <li><input type="radio" name="option" value="plums" checked required><label>Plums</label></li>
-            </ul>g
+              <li><input type="radio" name="fruit" value="apples" checked required><label>Apples</label></li>
+              <li><input type="radio" name="fruit" value="bananas" required><label>Bananas</label></li>
+              <li><input type="radio" name="fruit" value="grapes" required><label>Grapes</label></li>
+              <li><input type="radio" name="fruit" value="plums" required><label>Plums</label></li>
+          </ul>
           <!--
             The server is expecting one of the following values for `fruit`:
           -->
         </fieldset>
         <fieldset>
           <legend>Large list of values</legend>
-          <select name="bird">
-            <option value="duck">Ducks</option>
-            <option value="eagle">Eagles</option>
-            <option value="heron">Herons</option>
-            <option value="gull">Gulls</option>
-            <option value="pigeon">Pigeons</option>
-            <option value="raven">Ravens</option>
-            <option value="robin">Robins</option>
-            <option value="swallow">Swallows</option>
+          <select name="birds">
+            <option value="duck">Ducks</option required>
+            <option value="eagle">Eagles</option required>
+            <option value="heron">Herons</option required>
+            <option value="gull">Gulls</option required>
+            <option value="pigeon">Pigeons</option required>
+            <option value="raven">Ravens</option required>
+            <option value="robin">Robins</option required>
+            <option value="swallow">Swallows</option required>
           </select>
           <!--
             The server is expecting one of the following values for `birds`:
@@ -139,32 +139,38 @@
 
       <form action="#form_multiple" method="GET" id="form_multiple">
         <header>
-          <h2>Multiple choices from a set of options</h2>
+          <h2>
+            Multiple choices from a set of options
+          </h2>
         </header>
         <fieldset>
-          <legend>Small list of values</legend>
+          <legend>
+            Small list of values
+          </legend>
             <ul>
-              <li><input type="checkbox" name="apples" value="apples"/>Apples</li>
-              <li><input type="checkbox" name="bananas" value="bananas"/>Bananas</li>
-              <li><input type="checkbox" name="grapes" value="grapes"/>Grapes</li>
-              <li><input type="checkbox" name="plums" value="plums"/>Plums</li>
+              <li><input type="checkbox" name="fruit" value="apples">Apples</li>
+              <li><input type="checkbox" name="fruit" value="bananas">Bananas</li>
+              <li><input type="checkbox" name="fruit" value="grapes">Grapes</li>
+              <li><input type="checkbox" name="fruit" value="plums">Plums</li>
             </ul>
           <!--
             The server is expecting one or more of the following values for `fruit`:
           -->
         </fieldset>
         <fieldset>
-          <legend>Large list of values</legend>
-            <ul>
-              <li><input type="checkbox" name="duck" value="Ducks"/>Ducks</li>
-              <li><input type="checkbox" name="eagle" value="Eagles"/>Eagles</li>
-              <li><input type="checkbox" name="heron" value="Herons"/>Herons</li>
-              <li><input type="checkbox" name="gull" value="Gulls"/>Gulls</li>
-              <li><input type="checkbox" name="pigeon" value="Pigeons"/>Pigeons</li>
-              <li><input type="checkbox" name="raven" value="Ravens"/>Ravens</li>
-              <li><input type="checkbox" name="robin" value="Robins"/>Robins</li>
-              <li><input type="checkbox" name="swallow" value="Swallows"/>Swallows</li>
-            </ul>
+          <legend>
+            Large list of values
+          </legend>
+            <select name="bird" multiple>
+              <option value="duck">Ducks</option>
+              <option value="eagle">Eagles</option>
+              <option value="heron">Herons</option>
+              <option value="gull">Gulls</option>
+              <option value="pigeon">Pigeons</option>
+              <option value="raven">Ravens</option>
+              <option value="robin">Robins</option>
+              <option value="swallow">Swallows</option>
+            </select>
           <!--
             The server is expecting one or more of the following values for `birds`:
           -->
@@ -176,7 +182,9 @@
 
       <form action="#form_other" method="GET" id="form_other" enctype="multipart/form-data">
         <header>
-          <h2>Other form fields</h2>
+          <h2>
+            Other form fields
+          </h2>
         </header>
         <fieldset>
           <legend>Hidden</legend>
@@ -186,21 +194,27 @@
           -->
         </fieldset>
         <fieldset>
-          <legend>File(s)</legend>
+          <legend>
+            File(s)
+          </legend>
           <!--
             The server is expecting at least one file here, with the name of `photos`.
           -->
           <input type="file" name="photos">
         </fieldset>
         <fieldset>
-          <legend>Range</legend>
+          <legend>
+            Range
+          </legend>
           <!--
             The server is expecting at a numerical value for `bearing` between 0 and 359
           -->
-          <input type="range" name="bearing" min=0 max="359">
+          <input type="range" name="bearing" min="0" max="359">
         </fieldset>
         <fieldset>
-          <legend>Colour</legend>
+          <legend>
+            Colour
+          </legend>
           <label>
             <input type="color" name="background_color">
           </label>
