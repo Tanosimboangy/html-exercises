@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,9 +22,9 @@
       <!-- In this example, the 'Wait!' needs stressing when vocalised -->
       <ul>
         <li>
-          <strong>
-            "Wait!"
-          </strong>
+          <q><em>
+            Wait!
+          </em></q>
           shouted Jesse.
         </li>
       </ul>
@@ -33,7 +34,7 @@
       <!-- It's a good idea to tell a computer how to read a datetime: -->
       <ul>
         <li>
-          The time is now 2pm<time datetime="2020-02-12 14:00">, on Wednesday</time>.
+          The time is now <time datetime="2020-02-12T14:00:00+03:00">2pm, on Wednesday</time>.
         </li>
       </ul>
 
@@ -42,7 +43,7 @@
       <!-- What do 'H' and 'O' mean here? -->
       <ul>
         <li>
-          The elements H and O, bond as H<sub>2</sub>O, or water (as it is colloquaially known).
+          The elements <abbr title="Hydrogen">H</abbr> and <abbr title="Oxygen">O</abbr>, bond as H<sub>2</sub>O, or <dfn>water</dfn> (as it is colloquaially known).
         </li>
       </ul>
 
@@ -52,13 +53,13 @@
       <ul>
         <li>
           Editor's Notes:
-          Please use CTRL+B to bold this word: Critical<br>
+          Please use <kbd>CTRL</kbd>+<kbd>b</kbd> to bold this word: Critical<br>
           <b>
             Critical<br>
           </b>
         </li>
         <li>
-          Please use CTRL+I to italicise this word: Doubtful<br>
+          Please use <kbd>CTRL</kbd>+<kbd>I</kbd> to italicise this word: Doubtful<br>
           <i>
             Doubtful<br>
           </i>
@@ -69,7 +70,7 @@
         </li>
         <li>
           Please put a line through this word: Assuming<br>
-          <s>Assuming<br></s>
+          <del>Assuming<br></del>
         </li>
         <li>
           Please show that the word 'slow' was removed, and 'quick' added in its place in the following sentence:
@@ -78,17 +79,14 @@
       </ul>
       <hr>
       <!-- We can do the same with samples of code, even maintaining the whitespace: -->
-      <ul>
-        <li>
-          "Woah!'that' was unexpected!" exclaimed Keith.<br>
+      <p>
+          <q><em>Woah!</em><code>that</code> was unexpected!</q> exclaimed Keith.<br>
           Curiously, Jesse looked at the output on Keith's screen and it said:<br>
-        </li>
-        <li>
-          Unexpected value for argument 'that'
-            - in function clickHandler, line 12
-            - called from function anonymous, line 34
-        </li>
-      </ul>
+<pre>
+Unexpected value for argument <code>that</code>
+  - in function <code>clickHandler</code>, line 12
+  - called from function anonymous, line 34
+</pre>
       <!--I'm sorry but I don't even understand the question, so could you explain please?-->
       <hr>
       <!-- We can add helpful markup to highlight words -->
