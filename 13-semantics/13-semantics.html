@@ -16,7 +16,15 @@
     <main>
 
       <section>
-        <h2>A menu of a list of links</h2>
+        <h2>A menu of a list of links :</h2>
+        <nav>
+          <ul>
+            <li><a href="https://Home.com">Home</a></li>
+            <li><a href="https://Our services.com">services</a></li>
+            <li><a href="https://About us.com">about</a></li>
+            <li><a href="https://contact.com">Contact us</a></li>
+          </ul>
+        </nav>
         <!--
           1. Create a list of links to form a navigational element. The links are:
             - "Home" links to "/"
@@ -28,9 +36,32 @@
 
       <section>
         <h2>A profile update form</h2>
+        <form action="" method="POST">
+          <label id="first name">First name:
+            <input type="text" id="first name" name="first_name"><br>
+          </label><br>
+          <label id="family name">Family name:
+            <input type="text" id="family name"name="family_name"><br>
+          </label><br>
+          <label id="email">Email:
+            <input type="email" name="username"><br>
+          </label><br>
+          <label>Gender :<br>
+            <ul>
+              <li><input type="radio" name="genre" value="Male"><label>m</label></li>
+              <li><input type="radio" name="genre" value="Female"><label>f</label></li>
+              <li><input type="radio" name="genre" value="Prefer to not disclose"><label>na</label></li>
+            </ul>
+          </label><br>
+          <div class="form-control">
+            <label class="header">Profile Photo:</label>
+
+            <input id="image" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+
+          </label>
+        </form>
         <!--
           2. Build a form that posts to "/profile/save". In this form we want the user to be able to update their profile, the form needs the following…
-
           The user's:
             - First name and Family name, to be saved as "profile_first_name" and "profile_family_name" respectively. This is required.
             - Email, mandatory, to be saved as "username".
@@ -58,6 +89,13 @@
 
       <section>
         <h2>A table</h2>
+        <table>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Height</th>
+          </tr>
         <!--
           4. We need a table, with the following column headers:
 
