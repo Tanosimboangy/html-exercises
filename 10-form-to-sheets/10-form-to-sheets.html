@@ -1,69 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title>
-    10: Form to Google Sheets
-  </title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+      10: Form to Google Sheets
+    </title>
+  </head>
 
-<body>
+  <body>
 
-  <form action="https://script.google.com/macros/s/AKfycbx_k22UijbL8nV_HE_eFCqonZ5LtCmyZqLd_wvG3_lWoAdLGWI/exec"
-    method="POST">
-    <!--
-        The google sheet can be found at: https://docs.google.com/spreadsheets/d/1Vnkb5rE1kgXFMt2So3RwfvfLwayVtATt1o9NM-ry9UI/edit?usp=sharing
-        Create a field for each cell in the Google Sheet.
-      -->
+    <form action="https://script.google.com/macros/s/AKfycbx_k22UijbL8nV_HE_eFCqonZ5LtCmyZqLd_wvG3_lWoAdLGWI/exec"
+      method="POST">
+      <!--
+          The google sheet can be found at: https://docs.google.com/spreadsheets/d/1Vnkb5rE1kgXFMt2So3RwfvfLwayVtATt1o9NM-ry9UI/edit?usp=sharing
+          Create a field for each cell in the Google Sheet.
+        -->
 
-    <fieldset>
-      <legend>contributor</legend>
-      <input type="text" name="contributor" value="Jacquit">
-    </fieldset>
-    <fieldset>
-      <legend>artist_name</legend>
-      <input type="text" name="artist_name" required>
-    </fieldset>
-    <fieldset>
-      <legend>artist_id</legend>
-      <input type="text" name="artist_id" required>
-    </fieldset>
-    <fieldset>
-      <legend>genre</legend>
-      <select name="genre">
-        <option value="RNB">RNB</option>
-        <option value="antosy">Antosy</option>
-        <option value="baoenjy">Baoenjy</option>
-        <option value="basesa">Basesa</option>
-        <option value="batrelaky">Batrelaky</option>
-        <option value="kawitry">Kawitry</option>
-        <option value="kilalaky">Kilalaky</option>
-        <option value="mangaliba">Mangaliba</option>
-        <option value="pop">Pop</option>
-        <option value="rap">Rap</option>
-        <option value="rock">Rock</option>
-        <option value="salegy">Salegy</option>
-        <option value="slow">Slow</option>
-        <option value="tsapiky">Tsapiky</option>
-        <option value="watsawatsa">Watsawatsa</option>
-      </select>
-    </fieldset>
-    <fieldset>
-      <legend>photo_url</legend>
-      <input type="text" name="photo_url">
-    </fieldset>
-    <fieldset>
-      <legend> biography</legend>
-      <textarea name="biography" id="biography" rows="5" cols="33"></textarea>
-    </fieldset>
-    <fieldset>
-      <legend>Website</legend>
-      <input type="url" name="Website" pattern="https://.*" size="30" required>
-    </fieldset>
-    <button type="submit">Save</button>
-  </form>
-</body>
+      <fieldset>
+        <legend>
+          Contributor
+        </legend>
+        <input type="text" name="contributor">
+      </fieldset>
+      <fieldset>
+        <legend>
+          Artist's Name
+        </legend>
+        <input type="text" name="artist_name" required><br>
+        <label>
+          Enter the name of the artist.
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Artist's ID
+        </legend>
+        <input type="text" name="artist_id" required><br>
+        <label>
+          Enter the name of the artist but make it lowercase please.
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Genre</legend>
+        <select name="genre">
+          <option value="rnb">RNB</option>
+          <option value="antosy">Antosy</option>
+          <option value="baoenjy">Baoenjy</option>
+          <option value="basesa">Basesa</option>
+          <option value="batrelaky">Batrelaky</option>
+          <option value="kawitry">Kawitry</option>
+          <option value="kilalaky">Kilalaky</option>
+          <option value="mangaliba">Mangaliba</option>
+          <option value="pop">Pop</option>
+          <option value="rap">Rap</option>
+          <option value="rock">Rock</option>
+          <option value="salegy">Salegy</option>
+          <option value="slow">Slow</option>
+          <option value="tsapiky">Tsapiky</option>
+          <option value="watsawatsa">Watsawatsa</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Photo URL
+        </legend>
+        <input type="text" name="photo_url">
+      </fieldset>
+      <fieldset>
+        <legend>
+          Biography
+        </legend>
+        <textarea name="biography" id="biography" rows="5" cols="33"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Website
+        </legend>
+        <input type="url" name="Website" pattern="https://.*" size="30" required>
+      </fieldset>
+      <button type="submit">
+        Save
+      </button>
+    </form>
+  </body>
 
 </html>
