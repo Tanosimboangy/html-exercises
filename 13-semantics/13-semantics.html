@@ -46,6 +46,10 @@
           <label id="email">Email:
             <input type="email" name="username"><br>
           </label><br>
+          <label>
+            Mobil phone number :
+            <input type="tel" name="mobil_phone" required><br>
+          </label><br>
           <label>Gender :<br>
             <ul>
               <li><input type="radio" name="genre" value="Male"><label>m</label></li>
@@ -76,6 +80,19 @@
 
       <section>
         <h2>An excerpt</h2>
+          <h3>
+            "The story of your life"
+          </h3>
+          <p>
+            <q>The only reason you had me was so you could get a maid you wouldn't have to pay</q>, you'll say bitterly, dragging the vacuum cleaner out of the closet.
+          </p>
+          <p>
+            <q><strong>That's right!</strong></q> I'll say. <q>Thirteen years ago I knew the carpets would need vacuuming around now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with it.</q>
+          </p>
+          <p>
+            <q>you weren't my mother, this would be illegal</q>, you'll say, seething as you unwind the power cord and plug it into the wall outlet.
+          </p>
+          <h3><q>Ted Chiang</q></h3>
         <!--
           3. This excerpt is from a short story called "The story of your life" by "Ted Chiang". Supply the attribution to the author and their title, then mark-up the following excerpt correctly:
 
@@ -90,13 +107,39 @@
       <section>
         <h2>A table</h2>
         <table>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Age</th>
-            <th scope="col">Weight</th>
-            <th scope="col">Height</th>
-          </tr>
-        <!--
+          <thead>
+            <tr>
+              <th scope="col" id="header_name">Name</th>
+              <th scope="col" id="header_age">Age</th>
+              <th scope="col" id="header_weight">Weight</th>
+              <th scope="col" id="header_height">Height</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th headers="header_name" scope="student" id="Fred">Fred</th>
+              <td headers="Fred header_age">23</td>
+              <td headers="Fred header_weight">74kg</td>
+              <td headers="Fred header_height">182cm</td>
+            </tr>
+            <tr>
+              <th headers="header_name" scope="student" id="Anne">Anne</th>
+              <td headers="Anne header_age">26</td>
+              <td headers="Anne header_weight">56kg</td>
+              <td headers="Anne header_height">173cm</td>
+            </tr>
+            <tr>
+              <th headers="header_name" scope="student" id="Judith">Judith</th>
+              <td headers="Judith header_age">19</td>
+              <td headers="Judith header_weight">51kg</td>
+              <td headers="Judith header_height">168cm</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Summury :</h4>The three students in the different ages have different weights
+        as we can see from the table. Fred is the weightest and the hightest student, whereas Anne has the medium size, but Judith is
+        lightest and the shortest student amoung them.
+          <!--
           4. We need a table, with the following column headers:
 
             - Name
@@ -116,11 +159,22 @@
 
       <section>
         <h2>Search results</h2>
+        <nav>
+          <h3>Wikipedia</h3>
+          <label>
+            <input type="submit" id="search" value="search">
+            <input type="text" name="search">
+          </label><br>
+          <ul>
+            <li>Summury: We found two results with your research <q>critical thinking</q></li>
+            <a class="link" href="https://en.wikipedia.org/wiki/Critical_thinking"><br>
+            <a class="link" href="search">Go back to search.</a>
+            </a>
+        </nav>
         <!--
           5. Create a search results page in this folder and link to it from here.
 
           In this new page you create…
-
           After a user has entered a search term, we need to display the results of the search back to the user, so that they can click through to the page(s) that match their search.
 
           This page needs the following structure:
