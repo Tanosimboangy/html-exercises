@@ -52,19 +52,17 @@
             Phone number :
             <input type="tel" name="phone_number" required><br>
           </label><br>
-          <labe id="gender">
+          <label>
             Gender :<br>
-          </labe>
+          </label>
             <input type="radio" name="genre" value="Male"><label>m</label>
             <input type="radio" name="genre" value="Female"><label>f</label>
             <input type="radio" name="genre" value="Prefer to not disclose"><label>na</label><br>
-          <p>
-            <div class="form-control">
-              <label class="header">Profile Photo:
-                <input type="file" id="image" name="profile_photo" required="">
-              </label>
-            </div>
-          </p>
+          <div class="form-control">
+            <label class="header">Profile Photo:
+              <input type="file" id="image" name="profile_photo" required="">
+            </label>
+          </div>
         </form>
         <!--
             2. Build a form that posts to "/profile/save". In this form we want the user to be able to update their profile, the form needs the following…
