@@ -21,10 +21,10 @@
         <h2>A menu of a list of links :</h2>
         <nav>
           <ul>
-            <li><a href="https://Home.com">Home</a></li>
-            <li><a href="https://Our_services.com">services</a></li>
-            <li><a href="https://About_us.com">about</a></li>
-            <li><a href="https://contact.com">Contact us</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="Our_services">services</a></li>
+            <li><a href="About_us">about</a></li>
+            <li><a href="contact">Contact us</a></li>
           </ul>
         </nav>
         <!--
@@ -40,27 +40,27 @@
         <h2>A profile update form</h2>
         <form action="/action_page.php" method="POST">
           <label id="first_name">First name:
-            <input type="text" id="First_name" name="first_name"><br>
+            <input type="text" id="First_name" name="first_name" required><br>
           </label><br>
           <label id="family_name">Family name:
-            <input type="text" id="Family_name" name="family_name"><br>
+            <input type="text" id="Family_name" name="family_name" required><br>
           </label><br>
           <label id="email">Email:
-            <input type="email" name="username"><br>
+            <input type="email" name="username" required><br>
           </label><br>
           <label id="phone_number">
             Phone number :
-            <input type="tel" name="phone_number" required><br>
+            <input type="tel" name="phone_number"><br>
           </label><br>
-          <label>
-            Gender :<br>
-          </label>
-            <input type="radio" name="genre" value="Male"><label>m</label>
-            <input type="radio" name="genre" value="Female"><label>f</label>
-            <input type="radio" name="genre" value="Prefer to not disclose"><label>na</label><br>
+          <div>
+            <label>Gender :<br></label>
+              <input type="radio" name="genre" value="m"><label>Male</label><br>
+              <input type="radio" name="genre" value="f"><label>Female</label><br>
+              <input type="radio" name="genre" value=""><label>Prefer to not disclose</label><br>
+          </div>
           <div class="form-control">
             <label class="header">Profile Photo:
-              <input type="file" id="image" name="profile_photo" required="">
+              <input type="file" name="profile_photo" accept="image/png,image/jpeg,image/webp">
             </label>
           </div>
         </form>
