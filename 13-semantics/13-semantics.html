@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>
-      13: Semantic HTML
-    </title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>
+    13: Semantic HTML
+  </title>
+</head>
 
-  <body>
-    <header>
-      <h1>
-        Semantic HTML
-      </h1>
-    </header>
-    <main>
+<body>
+  <header>
+    <h1>
+      Semantic HTML
+    </h1>
+  </header>
+  <main>
 
-      <section>
-        <h2>A menu of a list of links :</h2>
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="Our_services">services</a></li>
-            <li><a href="About_us">about</a></li>
-            <li><a href="contact">Contact us</a></li>
-          </ul>
-        </nav>
-        <!--
+    <section>
+      <h2>A menu of a list of links :</h2>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="Our_services">services</a></li>
+          <li><a href="About_us">about</a></li>
+          <li><a href="contact">Contact us</a></li>
+        </ul>
+      </nav>
+      <!--
             1. Create a list of links to form a navigational element. The links are:
               - "Home" links to "/"
               - "Our services" links to "/services"
               - "About us" links to "/about"
               - "Contact us" links to "/contact"
           -->
-      </section>
+    </section>
 
-      <section>
-        <h2>A profile update form</h2>
-        <form action="/action_page.php" method="POST">
-          <label id="first_name">First name:
-            <input type="text" id="First_name" name="first_name" required><br>
-          </label><br>
-          <label id="family_name">Family name:
-            <input type="text" id="Family_name" name="family_name" required><br>
-          </label><br>
-          <label id="email">Email:
-            <input type="email" name="username" required><br>
-          </label><br>
-          <label id="phone_number">
-            Phone number :
-            <input type="tel" name="phone_number"><br>
-          </label><br>
-          <div>
-            <label>Gender :<br></label>
-              <input type="radio" name="genre" value="m"><label>Male</label><br>
-              <input type="radio" name="genre" value="f"><label>Female</label><br>
-              <input type="radio" name="genre" value=""><label>Prefer to not disclose</label><br>
-          </div>
-          <div class="form-control">
-            <label class="header">Profile Photo:
-              <input type="file" name="profile_photo" accept="image/png,image/jpeg,image/webp">
-            </label>
-          </div>
-        </form>
-        <!--
+    <section>
+      <h2>A profile update form</h2>
+      <form action="/action_page.php" method="POST">
+        <label id="first_name">First name:
+          <input type="text" id="First_name" name="first_name" required><br>
+        </label><br>
+        <label id="family_name">Family name:
+          <input type="text" id="Family_name" name="family_name" required><br>
+        </label><br>
+        <label id="email">Email:
+          <input type="email" name="username" required><br>
+        </label><br>
+        <label id="phone_number">
+          Phone number :
+          <input type="tel" name="phone_number"><br>
+        </label><br>
+        <div>
+          <label for="photo">Gender :<br></label>
+          <input type="radio" id="photo" name="genre" value="m"><label>Male</label><br>
+          <input type="radio" id="photo" name="genre" value="f"><label>Female</label><br>
+          <input type="radio" id="photo" name="genre" value=""><label>Prefer to not disclose</label><br>
+        </div>
+        <div class="form-control">
+          <label class="header">Profile Photo:
+            <input type="file" name="profile_photo" accept="image/png,image/jpeg,image/webp">
+          </label>
+        </div>
+      </form>
+      <!--
             2. Build a form that posts to "/profile/save". In this form we want the user to be able to update their profile, the form needs the following…
             The user's:
               - First name and Family name, to be saved as "profile_first_name" and "profile_family_name" respectively. This is required.
@@ -76,31 +76,29 @@
                 - Prefer to not disclose, "na"
               - Photo, optional, as "profile_photo". The user can upload a photo if they want. We only accept PNGs, JPGs, and WebP formats.
           -->
-      </section>
+    </section>
 
-      <section>
-        <h2>An excerpt</h2>
-        <h3>
-          "The story of your life"
-        </h3>
+    <section>
+      <h2>An excerpt</h2>
+      <blockquote>
+        <P>
+          <q>The only reason you had me was so you could get a maid you wouldn't have to
+          pay</q>, you'll say bitterly, dragging the vacuum cleaner out of the closet.
+        </P>
         <p>
-          <q>The only reason why you had me was so that you could get a maid you wouldn't have
-            to pay</q>, she said bitterly, dragging the vacuum cleaner out of the closet.
-        </p>
-        <p>
-          <q><em>That's right!</em></q> I said. <q>Thirteen years ago I knew that the carpets would
-            need vacuuming around now, and have a baby seems to be the cheapest and easiest
+          <q>That's right!</q> I'll say. <q>Thirteen years ago I knew the carpets would needv
+            acuuming around now, and having a baby seemed to be the cheapest and easiest
             way to get the job done. Now kindly get on with it.</q>
         </p>
         <p>
-          <q>If you weren't my mother, this would be illegal</q>, I said,
-          see thing as you unwind the power cord and plug
-          it into the wall outlet.
+          <p> you weren't my mother, this would be illegal</p>, you'll say, seething as
+          you unwind the power cord and plug it into the wall outlet.
         </p>
-        <h3>
-          <q>Ted Chiang</q>
-        </h3>
-        <!--
+        <footer>
+          From<q>Ted Chiang</q> in the <cite>The story of your life</cite>
+        </footer>
+      </blockquote>
+      <!--
             3. This excerpt is from a short story called "The story of your life" by
             "Ted Chiang". Supply the attribution to the author
             and their title, then mark-up the following excerpt correctly:
@@ -115,44 +113,44 @@
             "If you weren't my mother, this would be illegal," you'll say, seething as
             you unwind the power cord and plug it into the wall outlet.
           -->
-      </section>
+    </section>
 
-      <section>
-        <h2>A table</h2>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col" id="header_name">Name</th>
-              <th scope="col" id="header_age">Age</th>
-              <th scope="col" id="header_weight">Weight</th>
-              <th scope="col" id="header_height">Height</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th headers="header_name" scope="col" id="Fred">Fred</th>
-              <td headers="Fred header_age">23</td>
-              <td headers="Fred header_weight">74kg</td>
-              <td headers="Fred header_height">182cm</td>
-            </tr>
-            <tr>
-              <th headers="header_name" scope="col" id="Anne">Anne</th>
-              <td headers="Anne header_age">26</td>
-              <td headers="Anne header_weight">56kg</td>
-              <td headers="Anne header_height">173cm</td>
-            </tr>
-            <tr>
-              <th headers="header_name" scope="col" id="Judith">Judith</th>
-              <td headers="Judith header_age">19</td>
-              <td headers="Judith header_weight">51kg</td>
-              <td headers="Judith header_height">168cm</td>
-            </tr>
-          </tbody>
-        </table>
-        <h4>Summury :</h4>The three students in the different ages have different weights
+    <section>
+      <h2>A table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" id="header_name">Name</th>
+            <th scope="col" id="header_age">Age</th>
+            <th scope="col" id="header_weight">Weight</th>
+            <th scope="col" id="header_height">Height</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th headers="header_name" scope="col" id="Fred">Fred</th>
+            <td headers="Fred header_age">23</td>
+            <td headers="Fred header_weight">74kg</td>
+            <td headers="Fred header_height">182cm</td>
+          </tr>
+          <tr>
+            <th headers="header_name" scope="col" id="Anne">Anne</th>
+            <td headers="Anne header_age">26</td>
+            <td headers="Anne header_weight">56kg</td>
+            <td headers="Anne header_height">173cm</td>
+          </tr>
+          <tr>
+            <th headers="header_name" scope="col" id="Judith">Judith</th>
+            <td headers="Judith header_age">19</td>
+            <td headers="Judith header_weight">51kg</td>
+            <td headers="Judith header_height">168cm</td>
+          </tr>
+        </tbody>
+      </table>
+      <caption>Summury : Three students in the different ages have different weights
         as we can see from the table. Fred is the weightest and the hightest student, whereas
-        Anne has the medium size, but Judith is lightest and the shortest student amoung them.
-        <!--
+        Anne has the medium size, but Judith is lightest and the shortest student amoung them.</caption>
+      <!--
             4. We need a table, with the following column headers:
 
               - Name
@@ -168,12 +166,12 @@
 
             Please provide a summary of the student's information.
           -->
-      </section>
-      <section>
-        <h3>
-          <a href="search-result.html">Search Result.html</a><br>
-        </h3>
-        <!--
+    </section>
+    <section>
+      <h3>
+        <a href="search-result.html">Search Result.html</a><br>
+      </h3>
+      <!--
             5. Create a search results page in this folder and link to it from here.
 
             In this new page you create…
@@ -211,31 +209,33 @@
                 Develop your critical thinking skills. Boost your ability to solve problems
                 and make the right decisions at work, home and in study.
           -->
-      </section>
-      <section>
-        <h2>A definition</h2>
-          <h3>markup</h3>
-          /ˈmɑːkʌp/<br>
-          <i>noun</i><br>
-          noun: <b>markup</b>; plural noun: <b>markups</b>; noun:
-          <b>mark-up</b>; plural noun: <b>mark-ups</b>
-          <ol>
-            <li><b>the amount added to the cost price of goods to cover
-                overheads and profit.</b><br>
-              <q>a mark up of 50 per cent</q></li>
-            <li><b>the process or result of correcting text in preparation
-                for printing.</b></li>
-            <li><mark>computing</mark><br>
-              <b>a set of tags assigned to elements of a text to indicate their
-                to the rest of the text or dedicate how they should be displayed.</b><br>
-              <q>markup languages</q></li>
-          </ol>
-          <!--
+    </section>
+    <section>
+      <h2>A definition</h2>
+      <h3>markup</h3>
+      <p>/ˈmɑːkʌp/<br></p>
+      <i>noun</i><br>
+      noun: <b>markup</b>; plural noun: <b>markups</b>; noun:
+      <b>mark-up</b>; plural noun: <b>mark-ups</b>
+      <ol>
+        <li><b>the amount added to the cost price of goods to cover
+            overheads and profit.</b><br>
+          <q>a mark up of 50 per cent</q></li>
+        <li><b>the process or result of correcting text in preparation
+            for printing.</b></li>
+        <li><mark>computing</mark><br>
+          <b>a set of tags assigned to elements of a text to indicate their to the rest of the text or dedicate how they should be displayed.
+          </b><br>
+          <q>markup languages</q>
+        </li>
+      </ol>
+      <!--
             6. Create the HTML necessary for the image `markup.png` in this folder.
             It is a definition of the word 'Markup'.
           -->
-          <img src="markup.png" alt="There are three definitions for the word 'Markup'">
-      </section>
-    </main>
-  </body>
+      <img src="markup.png" alt="There are three definitions for the word 'Markup'">
+    </section>
+  </main>
+</body>
+
 </html>
