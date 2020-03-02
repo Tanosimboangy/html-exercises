@@ -30,7 +30,7 @@
         </dt>
         <dd>
           <p>
-            The abbreviation <code>&lt;abbr&gt;</code> is one element to shorten an expeansion content or  a goup of words.
+            The abbreviation <code>&lt;abbr&gt;</code> is one element to shorten an expeansion content or a goup of words.
           </p>
           <p>
             It allows the reader to read the code.
@@ -60,7 +60,7 @@
         </dt>
         <dd>
           <p>
-            Th <code>&lt;aside&gt;</code> tag defines some content aside from the content it is placed in.
+            The <code>&lt;aside&gt;</code> tag defines some content aside from the content it is placed in.
           </p>
           <p>
             The aside content should be related to the surrounding content.
@@ -79,10 +79,10 @@
         </dt>
         <dd>
           <p>
-          The HTML <code>&lt;b&gt;</code> is used to create a 'b' element, which represents bold text in an HTML document.
+            The HTML <code>&lt;b&gt;</code> is used to create a <q>b</q> element, which represents bold text in an HTML document.
           </p>
           <p>
-          It should be used to markup text as bold without conveying any extra importance.
+            It should be used to markup text as bold without conveying any extra importance.
           </p>
         </dd>
         <dt>
@@ -94,6 +94,14 @@
           </p>
           <p>
               Browsers usually indent blockquote elements.
+          </p>
+        </dd>
+        <dt>
+          <code>&lt;body&gt;</code>
+        </dt>
+        <dd>
+          <p>
+            The <code>&lt;body&gt;</code> element represents the main content of the document.
           </p>
         </dd>
         <dt>
@@ -134,15 +142,15 @@
         </dt>
         <dd>
           <p>
-            The <code>&lt;caption&gt;</code> tag defines a table caption.igned above a table.
+            The <code>&lt;caption&gt;</code> tag defines a table caption.
           </p>
           <p>
-            The caption tag must be inserted immediately after the tag. Note: You can specify only one caption per table. Tip: By default, a table caption will be center-aligned above a table.
+            The caption tag must be inserted immediately after the tag. You can specify only one caption per table. By default, a table caption will be center-aligned above a table.
           </p>
         </dd>
         <dt>
           <code>&lt;cite&gt;</code>
-        </dt>
+          </dt>
         <dd>
           <p>
             The <code>&lt;cite&gt;</code> tag defines the title of a work (e.g. a book, a song, a movie, a TV show, a painting, a sculpture, etc.).
@@ -155,16 +163,52 @@
           <p>
             The <code>&lt;code&gt;</code> element defines a fragment of computer code.
           </p>
+          <p>
+            This tag is not deprecated, but it is possible to achieve richer effect with CSS.
+          </p>
+        </dd>
+        <dt>
+          <code>&lt;col&gt;</code>
+        </dt>
+        <dd>
+          <p>
+            The <code>&lt;col&gt;</code> tag specifies column properties for each column within a <code>&lt;colgroup&gt;</code> element
+          </p>
+          <p>
+            The <code>&lt;col&gt;</code> tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
+          </p>
+        </dd>
+        <dt>
+          <code>&lt;colgroup&gt;</code>
+        </dt>
+        <dd>
+          <p>
+            The <code>&lt;colgroup&gt;</code> tag specifies a group of one or more columns in a table for formatting.
+          </p>
+          <p>
+            The <code>&lt;col&gt;</code> tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
+          </p>
+        </dd>
+        <dt>
+          <code>&lt;data&gt;</code>
+        </dt>
+        <dd>
+          <p>
+            The <code>&lt;data&gt;</code> tag links the given content with a machine-readable translation.
+          </p>
+          <p>
+            This element provides both a machine-readable value for data processors, and a human-readable value for rendering in a browser.
+          </p>
         </dd>
         <dt>
           <code>&lt;datalist&gt;</code>
         </dt>
         <dd>
           <p>
-            The <code>&lt;datalist&gt;</code> tag specifies a list of pre-defined options for an input element.
+            The <code>&lt;datalist&gt;</code> tag specifies a list of pre-defined options for an <code>&lt;input&gt;</code> element.
           </p>
           <p>
-            The datalist tag is used to provide an <q>autocomplete</q> feature on input elements. Users will see a drop-down list of pre-defined options as they input data.
+            The datalist tag is used to provide an <q>autocomplete</q> feature on <code>&lt;input&gt;</code> elements. Users will see a drop-down list of pre-defined options as they input data.
           </p>
         </dd>
         <dt>
@@ -185,6 +229,9 @@
           <p>
             The <code>&lt;del&gt;</code> defines text that has been deleted from a document.
           </p>
+          <p>
+            The del elements should not cross implied paragraph boundaries.
+          </p>
         </dd>
         <dt>
           <code>&lt;detail&gt;</code>
@@ -194,7 +241,7 @@
             The <code>&lt;detail&gt;</code> tag specifies additional details that the user can view or hide on demand.
           </p>
           <p>
-            tag can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the details tag The content of a details element should not be visible unless the open attribute is set.
+            The detail tag can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the details tag The content of a details element should not be visible unless the open attribute is set.
           </p>
         </dd>
         <dt>
@@ -203,6 +250,9 @@
         <dd>
           <p>
             The <code>&lt;dfn&gt;</code> The dfn tag represents the defining instance of a term in HTML. The defining instance is often the first use of a term in a document.
+          </p>
+          <p>
+            The nearest parent of the <code>&lt;dfn&gt;</code> tag must also contain the definition/explanation for the term inside <code>&lt;dfn&gt;</code>.
           </p>
         </dd>
         <dt>
@@ -213,7 +263,18 @@
             The <code>&lt;div&gt;</code> tag defines a division or a section in an HTML document.
           </p>
           <p>
-            The div element is often used as a container for other HTML elements to style them with CSS or to perform certain tasks with JavaScript.
+            The <code>&lt;div&gt;</code> element is often used as a container for other HTML elements to style them with CSS or to perform certain tasks with JavaScript.
+          </p>
+        </dd>
+        <dt>
+          <code>&lt;dl&gt;</code>
+        </dt>
+        <dd>
+          <p>
+            The <code>&lt;dl&gt;</code> tag defines a division or a section in an HTML document.
+          </p>
+          <p>
+            The <code>&lt;dl&gt;</code> element is often used as a container for other HTML elements to style them with CSS or to perform certain tasks with JavaScript.
           </p>
         </dd>
         <dt>
@@ -225,6 +286,14 @@
           </p>
           <p>
             The dt tag is used in conjunction with dl (defines a description list) and dd (describes each term/name).
+          </p>
+        </dd>
+        <dt>
+          <code>&lt;doctype&gt;</code>
+        </dt>
+        <dd>
+          <p>
+            The <code>&lt;doctype&gt;</code> tag
           </p>
         </dd>
         <dt>
@@ -298,7 +367,7 @@
         </dt>
         <dd>
           <p>
-            The <code>&lt;h1&gt;</code> represents a level 2 of heading in HTML document.
+            The <code>&lt;h2&gt;</code> represents a level 2 of heading in HTML document.
           </p>
         </dd>
         <dt>
@@ -322,7 +391,8 @@
         </dt>
         <dd>
           <p>
-            The <code>&lt;h5&gt;</code> represents a level 5 of heading in HTML document.          </p>
+            The <code>&lt;h5&gt;</code> represents a level 5 of heading in HTML document.
+          </p>
         </dd>
         <dt>
           <code>&lt;h6&gt;</code>
@@ -472,7 +542,7 @@
         </dt>
         <dd>
           <p>
-            The <code>&lt;mark&gt;</code> tag
+            The <code>&lt;mark&gt;</code> tag defines marked text.
           <p>
             The HTML <code>&lt;mark&gt;</code> tag is used for indicating text as marked or highlighted for reference purposes, due to its relevance in another context.
           </p>
